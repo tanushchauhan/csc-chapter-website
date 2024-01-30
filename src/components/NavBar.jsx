@@ -212,7 +212,10 @@ const MobileNavLink = ({ title, href, type = "link", handleMenuClick }) => {
   } else if (type === "btn") {
     return (
       <div className="overflow-hidden">
-        <motion.div variants={mobileLinkVars} className="text-2xl ">
+        <motion.div
+          variants={mobileLinkVars}
+          className="text-2xl text-gray-100"
+        >
           <button className="rounded-lg px-4 py-2 bg-green-600 hover:bg-green-700">
             Somethjing
           </button>

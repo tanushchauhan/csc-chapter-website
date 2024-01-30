@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function About() {
   return (
@@ -44,6 +45,7 @@ function About() {
       this is aboutAssume this is aboutAssume this is aboutAssume this is
       aboutAssume this is aboutAssume this is aboutAssume this is aboutAssume
       this is about
+      <Link to="/">Shit</Link>
     </motion.div>
   );
 }
