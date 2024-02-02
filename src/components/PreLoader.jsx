@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { MainContext } from "../contexts/MainContextProvider";
+import gifPreloader from "../img/preloader.gif";
 
 /* eslint-disable react/prop-types */
 function PreLoader({ style }) {
@@ -10,7 +11,7 @@ function PreLoader({ style }) {
         className="preloader h-screen w-screen preloader flex items-center justify-center bg-white"
         style={style}
       >
-        <img src="./src/img/preloader.gif" alt="preloader" />
+        <img src={gifPreloader} alt="preloader" />
       </div>
     );
   } else {
