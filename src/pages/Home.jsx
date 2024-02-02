@@ -119,9 +119,12 @@ function Home() {
               Have question? Click below and fill out a quick form.
             </p>
           </div>
-          <button className="rounded-lg px-4 py-2 bg-green-600 hover:bg-green-700 text-gray-100 text-xl w-[60%] mx-auto mt-7 max-w-44">
+          <Link
+            to="contact"
+            className="rounded-lg px-4 py-2 bg-green-600 hover:bg-green-700 text-gray-100 text-xl w-[60%] mx-auto mt-7 max-w-44 text-center"
+          >
             Contact Us
-          </button>
+          </Link>
         </div>
       </section>
     </motion.div>

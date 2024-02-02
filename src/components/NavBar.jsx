@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import Logo from "../img/logo.svg";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -66,9 +66,16 @@ function NavBar() {
     },
   };
 
+  const navigate = useNavigate();
+
   return (
     <header className="text-gray-900 dark:text-gray-200 flex text-xl justify-between items-center px-4 py-5 lg:px-8 lg:py-10 z-20">
-      <img src={Logo} alt="logo" className="h-16 lg:h-20" />
+      <img
+        src={Logo}
+        alt="logo"
+        className="h-16 lg:h-20 cursor-pointer"
+        onClick={() => navigate("/")}
+      />
       <div className="lg:flex gap-8 hidden">
         <NavLink to="/">Home</NavLink>
         <NavLink to="about">About</NavLink>
