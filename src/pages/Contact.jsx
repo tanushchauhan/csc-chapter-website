@@ -17,7 +17,12 @@ function Contact() {
             Have questions? Fill out this quick form and we will be in touch in
             no time!
           </p>
-          <form className="space-y-8" name="contact" netlify>
+          <form
+            className="space-y-8"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+          >
             <div>
               <label
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
