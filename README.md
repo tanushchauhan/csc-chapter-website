@@ -1,1 +1,3 @@
-# Website for CSC LTHS Chapter. Made using React and Tailwind.
+# Website for CSC LTHS Chapter.
+
+Made using React and Tailwind.
