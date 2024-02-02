@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Logo from "../img/logo.svg";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -67,8 +67,13 @@ function NavBar() {
   };
 
   return (
-    <header className="text-gray-900 dark:text-gray-200 flex text-xl justify-between items-center px-4 py-5 z-20">
-      <img src={Logo} alt="logo" className="h-16" />
+    <header className="text-gray-900 dark:text-gray-200 flex text-xl justify-between items-center px-4 py-5 lg:px-8 lg:py-10 z-20">
+      <img src={Logo} alt="logo" className="h-16 lg:h-20" />
+      <div className="lg:flex gap-8 hidden">
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="about">About</NavLink>
+        <NavLink to="contact">Contact Us</NavLink>
+      </div>
       <div className="flex gap-5">
         <button className="modeBtn" onClick={handleClick}>
           {!currMode ? (
@@ -78,7 +83,7 @@ function NavBar() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-10 dark:stroke-gray-200 stroke-gray-800"
+              className="w-10 lg:w-16 dark:stroke-gray-200 stroke-gray-800"
             >
               <path
                 strokeLinecap="round"
@@ -93,7 +98,7 @@ function NavBar() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-10 dark:stroke-gray-200 stroke-gray-800"
+              className="w-10 lg:w-16 dark:stroke-gray-200 stroke-gray-800"
             >
               <path
                 strokeLinecap="round"
@@ -104,7 +109,7 @@ function NavBar() {
           )}
         </button>
         <button
-          className="menuBtn z-10 dark:stroke-gray-200 stroke-gray-800"
+          className="menuBtn z-10 dark:stroke-gray-200 stroke-gray-800 lg:hidden"
           aria-expanded="false"
           onClick={handleMenuClick}
         >
@@ -166,6 +171,11 @@ function NavBar() {
                   handleMenuClick={handleMenuClick}
                 />
                 <MobileNavLink
+                  title="Contact Us"
+                  href="contact"
+                  handleMenuClick={handleMenuClick}
+                />
+                <MobileNavLink
                   title="Something"
                   href="/"
                   type="btn"
@@ -217,7 +227,7 @@ const MobileNavLink = ({ title, href, type = "link", handleMenuClick }) => {
           className="text-2xl text-gray-100"
         >
           <button className="rounded-lg px-4 py-2 bg-green-600 hover:bg-green-700">
-            Somethjing
+            {title}
           </button>
         </motion.div>
       </div>

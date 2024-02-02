@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Error() {
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className="flex items-center justify-center h-screen dark:text-gray-200">
       <div className="w-[75%]">
         <h1 className="text-center font-bold lg:text-3xl md:text-2xl">
           Something went wrong 😢

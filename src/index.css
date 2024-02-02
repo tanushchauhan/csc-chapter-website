@@ -6,6 +6,12 @@ html {
   scroll-behavior: smooth;
 }
 
+.active {
+  color: #16a34a;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 @keyframes outAnimationMenu {
   0% {
     opacity: 1;
